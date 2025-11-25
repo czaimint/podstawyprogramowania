@@ -3,7 +3,7 @@
 =======
 read -p "podaj rok: " year
 
-if [[ (year%4 -eq 0 && year%100 -ne 0) || (year%400 -eq 0) ]]; then
+if [[ (year%4 -eq 0 && year%100 -ne 0) && (year%400 -eq 0) ]]; then
 	echo "$year jest przestepny"
 else
 	echo "$year nie jest przestepny"
