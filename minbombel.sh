@@ -1,24 +1,24 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash
 
-declare -a table=(100 12 9 70 16 0 81)
+declare -a tablica=(100 12 9 70 16 0 81)
 
-table[7]= 1500
-table[8]= 69
-table[9]= 420
+tablica[7]=2137
+tablica[8]=420
+tablica[9]=67
 
-echo ${table[@]}
+echo "${tablica[@]}"
 
-t= ${table[@]}
+z=${#tablica[@]}
 
-for (( i=0; i<t-1; i++ )); do
-	for(( j=0; i<z-1-i; j++ )); do
-		if [[ ${table[j]} -gt ${table[j+1]} ]]; then
-			buf= ${table[j]}
-			table[j]= ${table[j+1]}
-			table[j+1]= $buf
-		fi
-	done
+for ((i=0; i<z-1; i++)); do
+    for ((j=0; j<z-1-i; j++)); do
+        if [[ ${tablica[j]} -gt ${tablica[j+1]} ]]; then
+            bufor=${tablica[j]}
+            tablica[j]=${tablica[j+1]}
+            tablica[j+1]=$bufor
+        fi
+    done
 done
 
-echo "Posortowana tablica: ${table[@]}"
-echo "Minimalna wartosc: ${table[0]}
+echo "posortowana tablica: ${tablica[@]}"
+echo "minimalna liczba: ${tablica[0]}"
