@@ -2,9 +2,9 @@
 
 declare -a tablica=(100 12 9 70 16 0 81)
 
-tablica[7]=2137
+tablica[7]=777
 tablica[8]=420
-tablica[9]=67
+tablica[9]=1500
 
 echo "${tablica[@]}"
 
